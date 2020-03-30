@@ -1,0 +1,30 @@
+version: "3"
+services:
+  content:
+    build: ./content
+    ports:
+      - "7979:80"
+    depends_on:
+      - contentdb
+    volumes:
+      - appdata:/app/App_Data
+  frontend:
+    build: ./dummy_frontend
+    ports:
+      - "8080:8080"
+  contentdb:
+    image: postgres:latest
+    expose:
+      - "5432"
+    ports:
+      - "5433:5432"
+    volumes:
+      - contentpgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=donaldduck
+      - POSTGRES_PASSWORD=hejhopp123
+      - POSTGRES_DB=contentdb
+volumes:
+  appdata:
+  contentpgdata:
+  pgdata:
