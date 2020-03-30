@@ -21,9 +21,7 @@
 - click Finish setup
 - navigate to localhost:7979/admin and log in with the credentials you just picked
 - open configuration -> export/import -> package import
-- import /content/DeploymentPackages/Everything.zip
-- In configuration -> settings -> localization add en and sv as languages, select en as default and click save
-- create ./api/src/config/orchardhooks.env (look at config/exampleenv.txt)
+- import /content/DeploymentPackages/SetupCMS.zip
 
 ## initial thoughts on setup in test and prod
 

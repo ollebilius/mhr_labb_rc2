@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { request } from "graphql-request";
 
 function App() {
+  //jag har testat att göra anropen med hjälp av "graphql-request" vilket är en "Most simple and lightweight GraphQL client"
+
+  //om vi vill ha något mer avancerat som dessutom har stöd datahantering i applikationen
+  //kan det vara värt att titta på "Apollo" (https://www.apollographql.com/)
+
+  //det går bra att göra vanliga fetch-anrop också
+
   // fetch("http://localhost:7979/api/graphql", {
   //   method: "POST",
   //   headers: {
@@ -21,7 +28,6 @@ function App() {
       }
     }
   }
-
   `;
 
   const endpoint = "http://localhost:7979/api/graphql";
