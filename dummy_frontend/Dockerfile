@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . . 
 WORKDIR /app/src    
 
-RUN npm install
+RUN npm install --no-optional
 RUN npm run build
 
 # run tests...
