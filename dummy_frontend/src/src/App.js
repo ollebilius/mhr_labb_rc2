@@ -20,12 +20,11 @@ function App() {
   //   .then(data => console.log("data returned:", data));
 
   const exampleQuery = `{
-    humanRightsCard {
-      contentItemId
+    smallcard {
+      cardNumber
+      avatarText
+      bodyText
       displayText
-      htmlBody {
-        html
-      }
     }
   }
   `;
@@ -34,19 +33,18 @@ function App() {
   const [exampleRequestResult, setResult] = useState([]);
 
   request(endpoint, exampleQuery)
-    .then(data => setResult(data.humanRightsCard))
-    .catch(err => {
+    .then((data) => setResult(data.smallcard))
+    .catch((err) => {
       console.log(err); // GraphQL response errors
     });
 
   return (
     <ul>
-      {exampleRequestResult.map(item => (
+      {exampleRequestResult.map((item) => (
         <li>
           <h2>Kort</h2>
           Namn: {item.displayText} <br />
-          ID: {item.contentItemId} <br />
-          <span dangerouslySetInnerHTML={{ __html: item.htmlBody.html }} />
+          Text: {item.bodyText} <br />
         </li>
       ))}
     </ul>

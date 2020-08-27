@@ -11,7 +11,7 @@ services:
   frontend:
     build: ./dummy_frontend
     ports:
-      - "8080:8080"
+      - "8081:8080"
   contentdb:
     image: postgres:latest
     expose:
