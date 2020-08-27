@@ -29,7 +29,8 @@ function App() {
   }
   `;
 
-  const endpoint = "http://localhost:7979/api/graphql";
+  // const endpoint = "http://localhost:7979/api/graphql";
+  const endpoint = "https://wafccms.azurewebsites.net/api/graphql";
   const [exampleRequestResult, setResult] = useState([]);
 
   request(endpoint, exampleQuery)
