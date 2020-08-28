@@ -31,6 +31,7 @@ function App() {
 
   // const endpoint = "http://localhost:7979/api/graphql";
   const endpoint = "https://mhrlabbcms.azurewebsites.net/api/graphql";
+
   const [exampleRequestResult, setResult] = useState([]);
 
   request(endpoint, exampleQuery)
